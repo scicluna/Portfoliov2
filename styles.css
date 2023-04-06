@@ -4,13 +4,10 @@ body {
     box-sizing: border-box;
     font-family: 'Permanent Marker', cursive;
     background-color: rgb(219, 213, 213);
-    overflow: hidden;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: absolute;
+    overflow: hidden;
 }
 
 main {
@@ -18,8 +15,13 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
+    width: 100vw;
+    padding: 5px;
 }
+
+/*---------------------------------------------------------*/
+/* Header Start */
 
 header {
     height: 10vh;
@@ -38,16 +40,18 @@ header>ul {
     width: 100%;
 }
 
+header>ul>li:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.477);
+}
+
 .activetab {
     color: rgba(0, 0, 0, 0.477);
 }
 
-
-.jls {
-    position: absolute;
-    top: 5px;
-    left: 0;
-}
+/* Header End */
+/*---------------------------------------------------------*/
+/* About Me Tab Start*/
 
 .aboutme {
     display: flex;
@@ -56,20 +60,6 @@ header>ul {
     width: 100vw;
     height: 90vh;
     padding: 15px;
-}
-
-.contactinfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 95vh;
-    width: 80vw;
-    align-items: start;
-    margin-left: 50vw;
-}
-
-.contactinfo>h4 {
-    font-size: 50px;
 }
 
 .aboutme>img {
@@ -81,6 +71,18 @@ header>ul {
     font-size: 40px;
     font-weight: bolder;
 
+}
+
+/* About Me Tab End */
+/*---------------------------------------------------------*/
+/* Works Tab Start*/
+.works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    padding: 15px;
 }
 
 .carousel {
@@ -106,6 +108,43 @@ header>ul {
     object-position: center;
     height: 100%;
 }
+
+/* Works Tab End */
+/*---------------------------------------------------------*/
+/* Contact Info Tab Start*/
+
+.contactinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 95vh;
+    width: 80vw;
+    align-items: start;
+    margin-left: 45vw;
+}
+
+.contactinfo>h4 {
+    font-size: 50px;
+}
+
+/* Contact Info Tab End */
+/*---------------------------------------------------------*/
+/* Resume Tab Start*/
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 95vh;
+    width: 80vw;
+    align-items: start;
+    margin-left: 45vw;
+}
+
+
+/* Resume Tab End */
+/*---------------------------------------------------------*/
+/* Modal Start*/
 
 .modal {
     top: 50vh;
@@ -188,8 +227,12 @@ header>ul {
 }
 
 .hide {
-    display: none;
+    display: none !important;
 }
+
+/* Modal End */
+/*---------------------------------------------------------*/
+/* Backsplash Start*/
 
 
 html,
@@ -200,7 +243,7 @@ body {
 
 body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .animation-wrapper {
@@ -239,14 +282,10 @@ body {
     margin: 16px;
     background-color: currentColor;
     border-radius: 50%;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 8%, #D3CDC6 100%);
 }
 
-@media (min-width: 740px) {
-    .stagger-visualizer .dot {
-        background-color: transparent;
-        background-image: linear-gradient(180deg, #FFFFFF 8%, #D3CDC6 100%);
-    }
-}
 
 .stagger-visualizer .cursor {
     position: absolute;
@@ -259,3 +298,126 @@ body {
     border-radius: 50%;
     color: rgba(0, 0, 255, 0.462);
 }
+
+/* Backsplash End */
+/*---------------------------------------------------------*/
+/* Mobile Scaling */
+
+@media only screen and (max-width: 1280px) {
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /*header*/
+    header {
+        height: 5vh;
+        width: 100%;
+    }
+
+    header>ul {
+        padding: 0;
+        font-size: 15px;
+        justify-content: space-around;
+        margin: 0;
+    }
+
+    /*aboutme*/
+    .aboutme {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        justify-content: flex-start;
+        width: 95vw;
+    }
+
+    .aboutme>img {
+        max-width: 300px;
+        margin: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .aboutme>div>p {
+        font-size: 20px;
+        font-weight: bolder;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+    }
+
+    /*work*/
+    .work {
+        display: flex;
+        width: 95vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carousel {
+        height: 95vw;
+        width: 95vw;
+        padding: 2.5px;
+    }
+
+    .carousel-custom {
+        height: 100%;
+    }
+
+    .carousel-custom .carousel-item {
+        height: 100%;
+    }
+
+    .carousel-indicators {
+        height: 15px;
+    }
+
+    .carousel-custom img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+    }
+
+
+    /*contact*/
+    .contactinfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 95vh;
+        width: 100%;
+        align-items: start;
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    .contactinfo>h4 {
+        font-size: 25px;
+    }
+
+    /*resume*/
+    .resume {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: flex-start;
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    /*modal*/
+
+
+
+    /*animation*/
+    .animation-wrapper {
+        width: 0;
+        padding-bottom: 40%;
+    }
+
+
+}
+
+@media only screen and (min-width: 2200px) {}
