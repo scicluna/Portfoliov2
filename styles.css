@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+    background-color: rgb(219, 213, 213);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+header>ul {
+    display: flex;
+    font-size: 30px;
+    font-weight: bolder;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.activetab {
+    color: rgba(0, 0, 0, 0.477);
+}
+
+
+.jls {
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+
+.aboutme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    padding: 15px;
+}
+
+.contactinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 95vh;
+    width: 80vw;
+    align-items: start;
+    margin-left: 50vw;
+}
+
+.contactinfo>h4 {
+    font-size: 50px;
+}
+
+.aboutme>img {
+    margin: 30px;
+    margin-right: 10vw;
+}
+
+.aboutme>div>p {
+    font-size: 40px;
+    font-weight: bolder;
+
+}
+
+.carousel {
+    height: 80vh;
+    width: 80vw;
+    padding: 15px;
+}
+
+.carousel-custom {
+    height: 100%;
+}
+
+.carousel-custom .carousel-item {
+    height: 100%;
+}
+
+.carousel-indicators {
+    height: 15px;
+}
+
+.carousel-custom img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+
+.modal {
+    top: 50vh;
+    --bs-modal-margin: 0rem;
+    --bs-modal-width: 750px;
+    --bs-modal-bg: var(--offwhite);
+    transform: translateY(-30%);
+    color: rgba(0, 0, 0, 0.883);
+    font-family: 'Roboto-mono', sans-serif;
+}
+
+.modal.show {
+    animation: blinking 500ms ease;
+}
+
+@keyframes blinking {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 25%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    75% {
+        opacity: 75%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+.card {
+    border: transparent;
+    outline-color: rgba(0, 0, 0, 0);
+}
+
+.center {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+}
+
+.card>img {
+    height: 35vh;
+    object-fit: cover;
+    object-position: left;
+}
+
+.cardfoots {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardfoots>a {
+    text-decoration: none;
+}
+
+.exit {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    color: rgb(227, 224, 224);
+    border: transparent;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.exit:hover {
+    color: white
+}
+
+.hide {
+    display: none;
+}
+
+
+html,
+body {
+    background-color: #F6F4F2;
+    color: #252423;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.animation-wrapper {
+    width: 80%;
+    padding-bottom: 40%;
+}
+
+.stagger-visualizer {
+    position: absolute;
+    transform: scale(1.5) translate(-50%) !important;
+    width: 1100px;
+    height: 95vh;
+    transform-origin: left top;
+    top: 2vh;
+    left: 50vw;
+}
+
+.stagger-visualizer .dots-wrapper {
+    transform: translateZ(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.stagger-visualizer .dot {
+    position: relative;
+    z-index: 1;
+    width: 23px;
+    height: 23px;
+    margin: 16px;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+
+@media (min-width: 740px) {
+    .stagger-visualizer .dot {
+        background-color: transparent;
+        background-image: linear-gradient(180deg, #FFFFFF 8%, #D3CDC6 100%);
+    }
+}
+
+.stagger-visualizer .cursor {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 37px;
+    height: 37px;
+    margin: 9px;
+    background-color: currentColor;
+    border-radius: 50%;
+    color: rgba(0, 0, 255, 0.462);
+}
