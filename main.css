@@ -347,14 +347,14 @@ body {
     }
 
     .aboutme>img {
-        max-width: 300px;
+        max-width: 250px;
         margin: 0;
         margin-right: 0;
         margin-bottom: 5px;
     }
 
     .aboutme>div>p {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: bolder;
         width: 100%;
         margin: 0;
