@@ -443,6 +443,12 @@ body {
     }
 }
 
+@media only screen and (max-width: 350px) {
+    .aboutme>div>p {
+        font-size: 13.5px;
+    }
+}
+
 @media (max-width: 1000px) and (orientation: landscape) {
     .carousel {
         height: 100%;
