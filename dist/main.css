@@ -1,0 +1,480 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Permanent Marker', cursive;
+    background-color: rgb(219, 213, 213);
+    display: flex;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    padding: 5px;
+}
+
+/*---------------------------------------------------------*/
+/* Header Start */
+
+header {
+    height: 10vh;
+    width: 100vw;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+header>ul {
+    display: flex;
+    font-size: 30px;
+    font-weight: bolder;
+    list-style: none;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header>ul>li:hover {
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.477);
+}
+
+.activetab {
+    color: rgba(0, 0, 0, 0.477);
+}
+
+/* Header End */
+/*---------------------------------------------------------*/
+/* About Me Tab Start*/
+
+.aboutme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    padding: 15px;
+}
+
+.aboutme>img {
+    margin: 30px;
+    margin-right: 10vw;
+}
+
+.aboutme>div>p {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+/* About Me Tab End */
+/*---------------------------------------------------------*/
+/* Works Tab Start*/
+.works {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    padding: 15px;
+}
+
+.carousel {
+    height: 80vh;
+    width: 80vw;
+    padding: 15px;
+}
+
+.carousel-custom {
+    height: 100%;
+}
+
+.carousel-custom .carousel-item {
+    height: 100%;
+}
+
+.carousel-indicators {
+    height: 15px;
+}
+
+.carousel-custom img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+}
+
+/* Works Tab End */
+/*---------------------------------------------------------*/
+/* Contact Info Tab Start*/
+
+.contactinfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 95vh;
+    width: 80vw;
+    align-items: start;
+    margin-left: 45vw;
+}
+
+.contactinfo>h4 {
+    font-size: 50px;
+}
+
+/* Contact Info Tab End */
+/*---------------------------------------------------------*/
+/* Resume Tab Start*/
+
+.resume {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Roboto-mono', sans-serif;
+}
+
+
+/* Resume Tab End */
+/*---------------------------------------------------------*/
+/* Modal Start*/
+
+.modal {
+    top: 50vh;
+    --bs-modal-margin: 0rem;
+    --bs-modal-width: 750px;
+    --bs-modal-bg: var(--offwhite);
+    transform: translateY(-30%);
+    color: rgba(0, 0, 0, 0.883);
+    font-family: 'Roboto-mono', sans-serif;
+}
+
+.modal.show {
+    animation: blinking 500ms ease;
+}
+
+@keyframes blinking {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 25%;
+    }
+
+    50% {
+        opacity: 50%;
+    }
+
+    75% {
+        opacity: 75%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+
+}
+
+.card {
+    border: transparent;
+    outline-color: rgba(0, 0, 0, 0);
+}
+
+.center {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+}
+
+.card>img {
+    height: 35vh;
+    object-fit: cover;
+    object-position: left;
+}
+
+.cardfoots {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardfoots>a {
+    text-decoration: none;
+}
+
+.exit {
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    color: rgb(227, 224, 224);
+    border: transparent;
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.exit:hover {
+    color: white
+}
+
+.hide {
+    display: none !important;
+}
+
+/* Modal End */
+/*---------------------------------------------------------*/
+/* Backsplash Start*/
+
+
+html,
+body {
+    background-color: #F6F4F2;
+    color: #252423;
+}
+
+body {
+    width: 100%;
+}
+
+.animation-wrapper {
+    width: 80%;
+    padding-bottom: 40%;
+}
+
+.stagger-visualizer {
+    position: absolute;
+    transform: scale(1.5) translate(-50%) !important;
+    width: 1100px;
+    height: 95vh;
+    transform-origin: left top;
+    top: 2vh;
+    left: 50vw;
+}
+
+.stagger-visualizer .dots-wrapper {
+    transform: translateZ(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.stagger-visualizer .dot {
+    position: relative;
+    z-index: 1;
+    width: 23px;
+    height: 23px;
+    margin: 16px;
+    background-color: currentColor;
+    border-radius: 50%;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 8%, #D3CDC6 100%);
+}
+
+
+.stagger-visualizer .cursor {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 37px;
+    height: 37px;
+    margin: 9px;
+    background-color: currentColor;
+    border-radius: 50%;
+    color: rgba(0, 0, 255, 0.462);
+}
+
+/* Backsplash End */
+/*---------------------------------------------------------*/
+/* Mobile Scaling */
+
+
+@media only screen and (max-width: 1600px) {
+
+    /*aboutme*/
+    .aboutme>div>p {
+        font-size: 30px;
+    }
+
+    /*resume*/
+    .resume>object {
+        height: 750px;
+        width: 1000px;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /*header*/
+    header {
+        height: 5vh;
+        width: 100%;
+    }
+
+    header>ul {
+        padding: 0;
+        font-size: 15px;
+        justify-content: space-around;
+        margin: 0;
+    }
+
+    /*aboutme*/
+    .aboutme {
+        flex-direction: column;
+        align-items: center;
+        padding: 5px;
+        justify-content: flex-start;
+        width: 95vw;
+    }
+
+    .aboutme>img {
+        max-width: 300px;
+        margin: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    .aboutme>div>p {
+        font-size: 20px;
+        font-weight: bolder;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+    }
+
+    /*work*/
+    .work {
+        display: flex;
+        width: 95vw;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+
+    .carousel {
+        height: 95vw;
+        width: 95vw;
+        padding: 2.5px;
+    }
+
+    .carousel-custom {
+        height: 100%;
+    }
+
+    .carousel-custom .carousel-item {
+        height: 100%;
+    }
+
+    .carousel-indicators {
+        height: 15px;
+    }
+
+    .carousel-custom img {
+        object-fit: cover;
+        object-position: center;
+        height: 100%;
+    }
+
+
+    /*contact*/
+    .contactinfo {
+        height: 80vh;
+        width: 100%;
+        margin-left: 0;
+        padding: 5px;
+    }
+
+    .contactinfo>h4 {
+        font-size: 25px;
+    }
+
+    /*resume*/
+    .resume>object {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 700px;
+        width: 350px;
+    }
+
+    .resume>object>p {
+        line-break: normal;
+        width: 80vw;
+    }
+
+    /*modal*/
+
+    /*animation*/
+    .animation-wrapper {
+        width: 0;
+        height: 0vh;
+        padding-bottom: 40%;
+    }
+
+    .stagger-visualizer {
+        transform: scale(1.5, 1) translate(-50%) !important;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+    .aboutme>div>p {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+    .carousel {
+        height: 100%;
+    }
+
+    .aboutme {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 90vh;
+        padding: 15px;
+    }
+
+    /*resume*/
+    .resume>object {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 350px;
+        width: 700px;
+    }
+
+    .resume>object>p {
+        line-break: normal;
+        width: 80vw;
+    }
+}
+
+@media (max-width: 700px) and (orientation: landscape) {
+    .aboutme>div>p {
+        font-size: 15px;
+    }
+}
