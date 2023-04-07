@@ -5,7 +5,7 @@ body {
     font-family: 'Permanent Marker', cursive;
     background-color: rgb(219, 213, 213);
     display: flex;
-    min-height: 100vh;
+    height: 100vh;
     position: absolute;
     overflow: hidden;
 }
@@ -135,10 +135,7 @@ header>ul>li:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 95vh;
-    width: 80vw;
-    align-items: start;
-    margin-left: 45vw;
+    font-family: 'Roboto-mono', sans-serif;
 }
 
 
@@ -243,7 +240,6 @@ body {
 
 body {
     width: 100%;
-    min-height: 100vh;
 }
 
 .animation-wrapper {
@@ -302,6 +298,21 @@ body {
 /* Backsplash End */
 /*---------------------------------------------------------*/
 /* Mobile Scaling */
+
+
+@media only screen and (max-width: 1600px) {
+
+    /*aboutme*/
+    .aboutme>div>p {
+        font-size: 30px;
+    }
+
+    /*resume*/
+    .resume>object {
+        height: 750px;
+        width: 1000px;
+    }
+}
 
 @media only screen and (max-width: 1280px) {
 
@@ -383,12 +394,8 @@ body {
 
     /*contact*/
     .contactinfo {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        height: 95vh;
+        height: 80vh;
         width: 100%;
-        align-items: start;
         margin-left: 0;
         padding: 5px;
     }
@@ -398,13 +405,14 @@ body {
     }
 
     /*resume*/
-    .resume {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: flex-start;
-        margin-left: 0;
-        padding: 5px;
+    .resume>object {
+        height: 700px;
+        width: 350px;
+    }
+
+    .resume>object>p {
+        word-break: break-all;
+        width: 80vw;
     }
 
     /*modal*/
@@ -419,5 +427,3 @@ body {
 
 
 }
-
-@media only screen and (min-width: 2200px) {}
