@@ -44,8 +44,11 @@ header>ul {
     width: 100%;
 }
 
-header>ul>li:hover {
+header>ul>li {
     cursor: pointer;
+}
+
+header>ul>li:hover {
     color: rgba(0, 0, 0, 0.477);
 }
 
