@@ -302,15 +302,21 @@ body {
 }
 
 .pausecontainer {
+    color: rgba(0, 0, 0, 0.552);
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     bottom: 0;
     right: 0;
-    width: 100px;
-    height: 100px;
+    width: 55px;
+    height: 55px;
     margin: 30px;
+    cursor: pointer;
+}
+
+.pausecontainer:hover {
+    color: black;
 }
 
 /* Backsplash End */
