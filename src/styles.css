@@ -301,6 +301,18 @@ body {
     color: rgba(0, 0, 255, 0.462);
 }
 
+.pausecontainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    margin: 30px;
+}
+
 /* Backsplash End */
 /*---------------------------------------------------------*/
 /* Mobile Scaling */
@@ -437,7 +449,6 @@ body {
     .stagger-visualizer {
         transform: scale(1.5, 1) translate(-50%) !important;
     }
-
 }
 
 @media only screen and (max-width: 400px) {
